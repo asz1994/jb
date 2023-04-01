@@ -1,12 +1,11 @@
-import React from 'react';
 import './App.css';
-import Canvas from './components/Canvas';
+import BirthdayMatrix from './components/BirthdayMatrix';
 
 function App() {
   return (
     <div className="App">
       <div>
-        <Canvas className="drawing-area"/>
+        <BirthdayMatrix className="birthday-area"/>
       </div>
     </div>
   );

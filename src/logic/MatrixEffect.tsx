@@ -10,7 +10,7 @@ export class MatrixEffect {
     constructor(canvasWidth: number, canvasHeight: number) {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
-        this.fontSize = 25;
+        this.fontSize = 45;
         this.columns = canvasWidth / this.fontSize;
         this.symbols = [];
         this.initialize();
@@ -20,6 +20,14 @@ export class MatrixEffect {
         for (let i = 0; i < this.columns; i++) {
             this.symbols[i] = new MatrixSymbol(i, 0, this.fontSize, this.canvasHeight);
         }
+    }
+
+    resizeWindow(canvasWidth: number, canvasHeight: number) {
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+        this.columns = canvasWidth / this.fontSize;
+        this.symbols = [];
+        this.initialize();
     }
 };
 

@@ -1,4 +1,4 @@
-const availableSymbols = 'abcdefghigklmnopqrstuvwxyz0123456789';
+const availableSymbols = '☺❁❀✿♡⚛️';
 
 export class MatrixSymbol {
     x: number;
@@ -11,7 +11,7 @@ export class MatrixSymbol {
         x: number,
         y: number,
         fontSize: number,
-        canvasHeight: number
+        canvasHeight: number,
     ) {
         this.x = x;
         this.y = y;
@@ -23,10 +23,10 @@ export class MatrixSymbol {
     draw(context: any) {
         const symbolPos = Math.random() * availableSymbols.length;
         this.text = availableSymbols.charAt(symbolPos)
-        context.fillStyle = '#00FF00';
         context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
 
-        if (this.y * this.fontSize > this.canvasHeight) {
+        const fallingStopRandomIndex = Math.random();
+        if (this.y * this.fontSize > this.canvasHeight && fallingStopRandomIndex > 0.90) {
             this.y = 0;
         } else {
             this.y += 1;
