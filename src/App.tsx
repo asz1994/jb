@@ -1,18 +1,18 @@
 import './App.css';
 import BirthdayMatrix from './components/BirthdayMatrix';
 import BirthdayImage from './components/BirthdayImage'
+import BirthdayText from './components/BirthdayText';
 
 function App() {
   return (
     <div className="App">
-      <div>
+      <div className="profile">
         <div className="birthday-profile">
           <BirthdayImage className="birthday-image"/>
-          <div>
-          </div>
+          <BirthdayText className="birthday-text"/>
         </div>
-        <BirthdayMatrix className="birthday-background"/>
       </div>
+      <BirthdayMatrix className="birthday-background"/>
     </div>
   );
 }
