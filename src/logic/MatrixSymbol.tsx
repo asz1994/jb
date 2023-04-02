@@ -27,9 +27,9 @@ export class MatrixSymbol {
 
         const fallingStopRandomIndex = Math.random();
         if (this.y * this.fontSize > this.canvasHeight && fallingStopRandomIndex > 0.90) {
-            this.y = 0;
+            this.y = Math.random() * (-50);
         } else {
-            this.y += 1;
+            this.y += 1.5;
         }
 
     }

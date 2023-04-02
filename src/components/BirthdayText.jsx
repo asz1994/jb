@@ -39,7 +39,7 @@ const BirthdayText = props => {
     });
 
     useEffect(() => {
-        const intervalId = setTimeout(typeText, 150);
+        const intervalId = setTimeout(typeText, 120);
         return () => clearInterval(intervalId);
     }, [typeText]);
 

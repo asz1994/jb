@@ -6,11 +6,11 @@
 
 body {
   overflow: hidden;
-  background: #111111;
+  background: black;
 }
 
 .birthday-background {
-  opacity: 0.4;
+  opacity: 0.25;
   position: absolute;
   top: 0;
   left: 0;
@@ -38,7 +38,7 @@ body {
   color: #FF00FF;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 15;
+  font-size: 18px;
 }
 
 .birthday-text > p {

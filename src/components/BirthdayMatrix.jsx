@@ -7,7 +7,7 @@ const BirthdayMatrix = props => {
 
     let lastTime = 0;
     let timer = 0;
-    const fps = 80;
+    const fps = 20;
     const nextFrame = 1000 / fps;
 
     useEffect(() => {
