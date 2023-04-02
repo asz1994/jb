@@ -1,4 +1,4 @@
-const availableSymbols = '☺❁❀✿♡⚛️';
+import { matrixSymbols } from './Symbols';
 
 export class MatrixSymbol {
     x: number;
@@ -21,8 +21,8 @@ export class MatrixSymbol {
     }
 
     draw(context: any) {
-        const symbolPos = Math.random() * availableSymbols.length;
-        this.text = availableSymbols.charAt(symbolPos)
+        const symbolPos = Math.random() * matrixSymbols.length;
+        this.text = matrixSymbols.charAt(symbolPos)
         context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
 
         const fallingStopRandomIndex = Math.random();

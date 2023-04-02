@@ -10,7 +10,7 @@ export class MatrixEffect {
     constructor(canvasWidth: number, canvasHeight: number) {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
-        this.fontSize = 45;
+        this.fontSize = 15;
         this.columns = canvasWidth / this.fontSize;
         this.symbols = [];
         this.initialize();

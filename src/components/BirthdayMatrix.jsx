@@ -54,7 +54,7 @@ const BirthdayMatrix = props => {
             window.cancelAnimationFrame(animationFrameId);
         }
 
-    }, [processFrame]);
+    }, []);
 
     return <canvas ref={canvasRef} {...props}/>
 }
