@@ -6,17 +6,20 @@ const BirthdayImage = props => {
     const canvasImageRef = useRef(null);
 
     useEffect(() => {
-        const canvas = canvasImageRef.current;
-        const context = canvas.getContext('2d');
-
         const image = new Image();
         image.src = sourceImageBase64;
-
-        image.addEventListener('load', () => {
+        
+        const canvas = canvasImageRef.current;
+        const context = canvas.getContext('2d');
+        
+        image.onload = () => {
+            canvas.width = image.width;
+            canvas.height = image.height;
+        
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
             const particles = [];
-            const numberOfParticles = 6000;
+            const numberOfParticles = 10000;
             initializeParticles(
                 particles,
                 numberOfParticles,
@@ -66,7 +69,7 @@ const BirthdayImage = props => {
             return () => {
                 window.cancelAnimationFrame(animationFrameId);
             }
-        });
+        };
 
     }, []);
 

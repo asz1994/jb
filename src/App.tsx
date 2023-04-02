@@ -6,8 +6,12 @@ function App() {
   return (
     <div className="App">
       <div>
-        <BirthdayMatrix className="birthday-area"/>
-        <BirthdayImage className="birthday-image"/>
+        <div className="birthday-profile">
+          <BirthdayImage className="birthday-image"/>
+          <div>
+          </div>
+        </div>
+        <BirthdayMatrix className="birthday-background"/>
       </div>
     </div>
   );

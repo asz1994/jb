@@ -11,8 +11,11 @@ export function processFrame(
     context.fillRect(0, 0, width, height);
     context.textAlign = 'center';
     context.font = matrixEffect.fontSize + 'px monospace';
-    // context.fillStyle = '#FF00FF';
-    context.fillStyle = gradient;
+    if (Math.random() * 1 > 0.95) {
+        context.fillStyle = '#FFFFFF';
+    } else {
+        context.fillStyle = gradient;
+    }
     matrixEffect.symbols.forEach(s => {
         s.draw(context);
     });

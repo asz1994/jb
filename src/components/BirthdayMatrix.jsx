@@ -7,7 +7,7 @@ const BirthdayMatrix = props => {
 
     let lastTime = 0;
     let timer = 0;
-    const fps = 20;
+    const fps = 80;
     const nextFrame = 1000 / fps;
 
     useEffect(() => {
@@ -17,13 +17,9 @@ const BirthdayMatrix = props => {
         canvas.height = window.innerHeight;
 
         const gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(0, '#FF00FF'); // Fuchsia.
-        gradient.addColorStop(0.2, '#FF69B4'); // pink.
-        gradient.addColorStop(0.4, '#FF00FF'); // Fuchsia.
-        gradient.addColorStop(0.6, '#9F2B68'); // Amaranth.
-        gradient.addColorStop(0.8, '#FF00FF'); // Fuchsia.
-        gradient.addColorStop(1.0, '#FFB6C1'); // Light Pink.
-
+        gradient.addColorStop(0, '#FF00FF');
+        gradient.addColorStop(1.0, '#FF00FF');
+        
         const matrixEffect = new MatrixEffect(
             canvas.width,
             canvas.height,

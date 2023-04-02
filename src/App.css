@@ -6,21 +6,29 @@
 
 body {
   overflow: hidden;
-  background: black;
+  background: #111111;
 }
 
-.birthday-area {
+.birthday-background {
+  opacity: 0.4;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.birthday-image {
+.birthday-profile {
   opacity: 1;
+}
+
+.birthday-image {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 502px;
-  height: 745px;
+  filter: drop-shadow(0px 0px 10px #FF00FF);
+}
+
+.birthday-text {
+  text-align: center;
+  color: #FF00FF;
 }

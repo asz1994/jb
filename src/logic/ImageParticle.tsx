@@ -18,8 +18,8 @@ export class ImageParticle {
         this.x = Math.random() * canvasWidth;
         this.y = 0;
         this.speed = 0;
-        this.velocity = Math.random() * 0.2;
-        this.size = Math.random() * 1 + 0.5;
+        this.velocity = Math.random() * 7;
+        this.size = Math.random() * 2;
         this.canvasHeight = canvasHeight;
         this.canvasWidth = canvasWidth;
         this.positionX = Math.floor(this.x);
@@ -71,14 +71,14 @@ export function processFrame(
     particles: ImageParticle[],
     mappedImage: [],
 ) {
-    context.globalAlpha = 0.05;
-    context.fillStyle = 'rgb(0, 0, 0)';
-    context.globalAlpha = 0.2;
+    context.globalAlpha = 0.1;
+    context.fillStyle = 'rgb(10, 0, 10)';
+    context.globalAlpha = 0.02;
     context.fillRect(0, 0, canvasWidth, canvasHeight);
 
     for (let i = 0; i < particles.length; i++) {
         particles[i].update(mappedImage);
-        context.globalAlpha = particles[i].speed * 0.3;
+        context.globalAlpha = particles[i].speed * 0.07;
         particles[i].draw(context);
     }
 }
