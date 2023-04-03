@@ -18,7 +18,7 @@ export class MatrixEffect {
 
     initialize() {
         for (let i = 0; i < this.columns; i++) {
-            this.symbols[i] = new MatrixSymbol(i, 0, this.fontSize, this.canvasHeight);
+            this.symbols[i] = new MatrixSymbol(i, Math.random() * (-30), this.fontSize, this.canvasHeight);
         }
     }
 

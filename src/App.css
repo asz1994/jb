@@ -10,22 +10,20 @@ body {
 }
 
 .birthday-background {
-  opacity: 0.25;
+  opacity: 0.3;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.profile {
-  margin: 30px auto;
+.console {
+  margin: 3px;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.birthday-profile {
   opacity: 1;
-  margin: 0 auto;
 }
 
 .birthday-image {
@@ -38,8 +36,9 @@ body {
   color: #FF00FF;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
 }
+
 
 .birthday-text > p {
   margin-bottom: 10px;

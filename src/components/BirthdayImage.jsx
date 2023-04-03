@@ -1,21 +1,40 @@
 import { useEffect, useRef } from 'react';
 import { initializeParticles, processFrame } from '../logic/ImageParticle';
 import { sourceImageBase64 } from '../logic/ImageSource';
+import useBirthdayState from '../store/store';
+import { shallow } from 'zustand/shallow';
+
 
 const BirthdayImage = props => {
     const canvasImageRef = useRef(null);
+    const introFinished = useBirthdayState((state) => state.introFinished, shallow);
 
     useEffect(() => {
+        const canvas = canvasImageRef.current;
+        if (!introFinished) {
+            canvas.width = 0;
+            canvas.height = 0;
+            return;
+        }
+
         const image = new Image();
         image.src = sourceImageBase64;
-        
-        const canvas = canvasImageRef.current;
+
         const context = canvas.getContext('2d');
         
         image.onload = () => {
-            canvas.width = image.width;
-            canvas.height = image.height;
-        
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth < image.width) {
+                const delta = 10;
+                canvas.width = windowWidth - delta;
+                const imageScale = image.height / image.width;
+                canvas.height = Math.floor(imageScale * canvas.width) - Math.floor(delta * imageScale);
+            } else {
+                canvas.width = image.width;
+                canvas.height = image.height;
+            }
+
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
             const particles = [];
@@ -66,12 +85,13 @@ const BirthdayImage = props => {
             }
             render();
 
+            useBirthdayState.getState().setImageLoaded(true);
+
             return () => {
                 window.cancelAnimationFrame(animationFrameId);
             }
         };
-
-    }, []);
+    }, [introFinished]);
 
     return <canvas ref={canvasImageRef} {...props} />
 }
