@@ -38,7 +38,7 @@ const BirthdayImage = props => {
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
             const particles = [];
-            const numberOfParticles = 7000;
+            const numberOfParticles = 3000;
             initializeParticles(
                 particles,
                 numberOfParticles,

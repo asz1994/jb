@@ -1,1 +1,1 @@
-export const matrixSymbols = 'BIRTHDAY#$<>!=?';  // '☺❁❀✿♡⚛️';
+export const matrixSymbols = '#LOVEYOU';  // '☺❁❀✿♡⚛️';

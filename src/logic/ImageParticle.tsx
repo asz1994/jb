@@ -18,8 +18,8 @@ export class ImageParticle {
         this.x = Math.random() * canvasWidth;
         this.y = 0;
         this.speed = 0;
-        this.velocity = Math.random() * 7;
-        this.size = Math.random() * 2;
+        this.velocity = Math.random() * 8;
+        this.size = Math.random() * 3;
         this.canvasHeight = canvasHeight;
         this.canvasWidth = canvasWidth;
         this.positionX = Math.floor(this.x);
@@ -47,7 +47,7 @@ export class ImageParticle {
 
     draw(context: any) {
         context.beginPath();
-        context.fillStyle = '#FF00FF';
+        context.fillStyle = '#00FF00';
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         context.fill();
     }
