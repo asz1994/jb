@@ -1,1 +1,1 @@
-export const matrixSymbols = '#LOVEYOU';  // '☺❁❀✿♡⚛️';
+export const matrixSymbols = '#LOVE YOU';  // '☺❁❀✿♡⚛️';
