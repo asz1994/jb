@@ -1,5 +1,5 @@
 export const initialText = [
-    { text: 'Матрица активирована!', isCommand: true, typed: true },
+    { text: 'Матрица активирована', isCommand: true, typed: true },
     { text: 'Войти?', isCommand: true, typed: true },
     { text: 'Да', isCommand: true, typed: true },
     { text: 'Секундочку ......', isCommand: true, typed: true },
@@ -19,11 +19,10 @@ export const inboxTexts = [
 
 export const congratulationText = [
     { text: 'Дорогая, Юля :*', isCommand: false, typed: false },
-    { text: 'Желаю Тебе всего самого в твоём Новом Году!', isCommand: false, typed: false },
+    { text: 'Желаю Тебе всего самого в Новом Году!', isCommand: false, typed: false },
     { text: 'Очень хочу, чтобы Ты радовалась жизни!', isCommand: false, typed: false },
     { text: 'Держи хвост пистолетом, и все получится!', isCommand: false, typed: false },
     { text: 'Лёша с ♡♡♡', isCommand: false, typed: false },
-    { text: 'P.S. я тут еще пасхалку оставил одну - найди ее ;)', isCommand: false, typed: true },
 ]
 
 export default {};
